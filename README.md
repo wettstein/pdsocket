@@ -21,7 +21,7 @@ The networking protocol sent to Pd is [FUDI](http://en.wikipedia.org/wiki/FUDI) 
 
 ### Todo
 
- * test on win
+ * test on linux
  * close method for Pd-Socket
  * Pd-0.43 compatibility
  * write test
@@ -33,6 +33,7 @@ Author(s)
 ---------
 
  * Enrique Erne
+ * Moritz Wettstein
 
 
 ### Related Projects

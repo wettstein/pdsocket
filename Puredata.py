@@ -15,7 +15,7 @@ import os, sys, threading
 
 class Puredata(threading.Thread):
 
-	def prepare(self, pd = None, dir = '', file = '', args = '-stderr -nostdpath -rt -send \"pd dsp 1;pd dsp 0;\"'):
+	def prepare(self, pd = None, dir = '', file = '', args = '-nostdpath -send \"pd dsp 1;pd dsp 0;\"'):
 		self.pd = pd
 		self.file = dir + file
 		# args = -stderr -nostdpath -rt -nogui -path <path> -audiobuf <n> -nostdpath -nogui -send \"pd dsp 1;pd dsp 0;\"
@@ -28,7 +28,7 @@ class Puredata(threading.Thread):
 		elif sys.platform == 'darwin':
 			self.pd = '//Applications/Pd-0.42-5.app/Contents/Resources/bin/pd'
 		elif sys.platform == 'win32':
-			self.pd = '%programfiles%\pd\bin\pd.exe'
+			self.pd = 'C:\\pd\\bin\\pd.exe'
 		return self
 		
 	def run(self):
